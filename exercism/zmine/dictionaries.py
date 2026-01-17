@@ -1,5 +1,7 @@
 
 person = {"name":"Alice", "age":25,  "city":"Paris", "street":"Neveh Yarak", "number":99}
+scores = {"Alice": 82, "Bob": 91, "Charlie": 78}
+
 # level 1 - Basic
 def first_dict():
     name = "Alice"
@@ -70,6 +72,30 @@ def dir_combine():
         c.update({i:b[i]})
     return c
 
+def dir_combine2():
+    a = {"x": 1, "y": 2}
+    b = {"y": 3, "z": 4}
+    merged = a.copy()
+    merged.update(b)
+    return merged
+
+def dir_combine3():
+    a = {"x": 1, "y": 2}
+    b = {"y": 3, "z": 4}
+    merge = a | b       #Combine 2 directories, like Union: {1, 2} | {2, 3} => {1, 2, 3}
+    return merge
+
+def dir_combine4():
+    a = {"x": 1, "y": 2}
+    b = {"y": 3, "z": 4}
+    merge = {**a, **b}
+    return merge
+
+def max_values():
+    return max(scores.values())
+
+def max_keys():
+    return max(scores.keys())
 
 
 print (first_dict())
@@ -87,3 +113,8 @@ print (get_value_of("age"))
 
 print (count_occurs(["apple", "banana", "apple", "orange", "banana", "apple"]))
 print (dir_combine())
+print (dir_combine2())
+print (dir_combine3())
+print (dir_combine4())
+print (max_values())
+print (max_keys())
