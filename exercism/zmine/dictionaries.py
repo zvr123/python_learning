@@ -1,6 +1,6 @@
 
 person = {"name":"Alice", "age":25,  "city":"Paris", "street":"Neveh Yarak", "number":99}
-# level 1 - Easy
+# level 1 - Basic
 def first_dict():
     name = "Alice"
     age = 25
@@ -28,6 +28,7 @@ def remove_last():
     person.popitem()
     return (person)
 
+# Level 2 - Common Options
 def check_key_exist(key1):
     if (key1 in person):
         return (f"{key1} was found")
@@ -49,6 +50,17 @@ def get_value_of(key1):
     else:
         return (f"{key1}, wasn't found in the Dictionary")
 
+# Level 3 - Thinking in Directories
+def count_occurs(list1):
+    dict1 = {}
+    for i in list1:
+        if (i in dict1):
+            dict1[i]+=1
+        else:
+            dict1.update({i:1})
+            # OR
+            dict1[i] = 1
+    return dict1
 
 
 print (first_dict())
@@ -63,3 +75,5 @@ print (loop_key({"name":"Alice", "age":25,  "city":"Paris"}))
 print (dict_keys_length())
 print (get_value_of("phone"))
 print (get_value_of("age"))
+
+print (count_occurs(["apple", "banana", "apple", "orange", "banana", "apple"]))
