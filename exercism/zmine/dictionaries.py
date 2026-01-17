@@ -62,6 +62,15 @@ def count_occurs(list1):
             dict1[i] = 1
     return dict1
 
+def dir_combine():
+    a = {"x": 1, "y": 2}
+    b = {"y": 3, "z": 4}
+    c = a.copy()
+    for i in b:
+        c.update({i:b[i]})
+    return c
+
+
 
 print (first_dict())
 print (name_age())
@@ -77,3 +86,4 @@ print (get_value_of("phone"))
 print (get_value_of("age"))
 
 print (count_occurs(["apple", "banana", "apple", "orange", "banana", "apple"]))
+print (dir_combine())
