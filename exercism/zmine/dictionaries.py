@@ -104,6 +104,15 @@ def above_80():
             above.update({i:scores[i]})
     return above
 
+def above_80_2():
+    high_scorers = {
+    name: score
+    for name, score in scores.items()
+    if score >= 80
+    }   
+    return high_scorers
+
+
 
 print (first_dict())
 print (name_age())
@@ -126,3 +135,4 @@ print (dir_combine4())
 print (max_values())
 print (max_keys())
 print (above_80())
+print (above_80_2())
