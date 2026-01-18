@@ -97,6 +97,13 @@ def max_values():
 def max_keys():
     return max(scores.keys())
 
+def above_80():
+    above = {}
+    for i in scores:
+        if (scores[i]>80):
+            above.update({i:scores[i]})
+    return above
+
 
 print (first_dict())
 print (name_age())
@@ -118,3 +125,4 @@ print (dir_combine3())
 print (dir_combine4())
 print (max_values())
 print (max_keys())
+print (above_80())
