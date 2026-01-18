@@ -1,6 +1,13 @@
 
 person = {"name":"Alice", "age":25,  "city":"Paris", "street":"Neveh Yarak", "number":99}
 scores = {"Alice": 82, "Bob": 91, "Charlie": 78}
+student = {"name": "Alice",
+    "grades": {
+        "math": 90,
+        "english": 85,
+        "science": 92
+    }
+}
 
 # level 1 - Basic
 def first_dict():
@@ -112,6 +119,23 @@ def above_80_2():
     }   
     return high_scorers
 
+# Level 4- Hard (Nested dictionaries)
+def nested_score():
+    return student["grades"]["science"]
+
+def nested_average():
+    count = 0
+    sum = 0
+    for key,score in student["grades"].items():
+        count += 1
+        sum += score
+    return (f"Average is: {sum/count}")
+
+def update_nested(math_score):
+    student["grades"].update({"math":math_score})
+    return (f'math:{student["grades"]["math"]}')
+
+# Level 5 — Advanced (Real-world patterns)
 
 
 print (first_dict())
@@ -136,3 +160,8 @@ print (max_values())
 print (max_keys())
 print (above_80())
 print (above_80_2())
+
+
+print (nested_score())
+print (nested_average())
+print (update_nested(100))
